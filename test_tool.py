@@ -68,6 +68,16 @@ def main():
             "model_name": "google/siglip-base-patch16-224",
             "model_type": "SigLIP",
             "output_file": "test_results/siglip_test.json"
+        },
+        {
+            "model_name": "MoonVit/moonvit-base-patch16-224",
+            "model_type": "MoonVit",
+            "output_file": "test_results/moonvit_test.json"
+        },
+        {
+            "model_name": "kimivl-A3B",
+            "model_type": "KimiVL-A3B",
+            "output_file": "test_results/kimivl_test.json"
         }
     ]
     

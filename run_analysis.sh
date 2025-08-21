@@ -41,4 +41,18 @@ python analyze_qwen_embeddings.py \
     --output "results/molmo_7b_analysis.json" \
     --device auto
 
+# 分析MoonVit模型
+echo "正在分析 MoonVit..."
+python analyze_qwen_embeddings.py \
+    --model "MoonVit/moonvit-base-patch16-224" \
+    --output "results/moonvit_analysis.json" \
+    --device auto
+
+# 分析KimiVL-A3B模型
+echo "正在分析 KimiVL-A3B..."
+python analyze_qwen_embeddings.py \
+    --model "kimivl-A3B" \
+    --output "results/kimivl_a3b_analysis.json" \
+    --device auto
+
 echo "分析完成！结果保存在 results/ 目录中"

@@ -40,6 +40,10 @@ class MultiModalEmbeddingAnalyzer:
                 return 'qwen-vl'
             else:
                 return 'qwen'
+        elif 'moonvit' in model_name_lower or 'moon-vit' in model_name_lower:
+            return 'moonvit'
+        elif 'kimivl' in model_name_lower or 'kimi-vl' in model_name_lower or 'kimivl-a3b' in model_name_lower:
+            return 'kimivl'
         elif 'vit' in model_name_lower or 'vision' in model_name_lower:
             return 'vit'
         elif 'siglip' in model_name_lower:
@@ -69,7 +73,7 @@ class MultiModalEmbeddingAnalyzer:
         
         try:
             # 根据模型类型选择加载方式
-            if self.model_type in ['qwen', 'qwen-vl', 'molmo']:
+            if self.model_type in ['qwen', 'qwen-vl', 'molmo', 'kimivl']:
                 # 需要分词器的模型
                 self.tokenizer = AutoTokenizer.from_pretrained(
                     self.model_name,
@@ -144,12 +148,12 @@ class MultiModalEmbeddingAnalyzer:
             if self.model_type == 'siglip':
                 # SigLIP模型：所有norm层都分析
                 is_embedding_related = True
-            elif self.model_type == 'vit':
-                # ViT模型：查找与patch embedding和position embedding相关的norm
+            elif self.model_type in ['vit', 'moonvit']:
+                # ViT和MoonVit模型：查找与patch embedding和position embedding相关的norm
                 is_embedding_related = any(keyword in layer_name.lower() for keyword in 
                     ['embed', 'patch', 'pos', 'cls', 'layernorm', 'norm'])
-            elif self.model_type in ['qwen', 'qwen-vl', 'molmo']:
-                # Qwen和Molmo模型：查找输入相关的norm层
+            elif self.model_type in ['qwen', 'qwen-vl', 'molmo', 'kimivl']:
+                # Qwen、Molmo和KimiVL模型：查找输入相关的norm层
                 is_embedding_related = any(keyword in layer_name.lower() for keyword in 
                     ['embed', 'input', 'layernorm', 'norm']) or 'layers.0' in layer_name
             

@@ -34,6 +34,14 @@
 - **模型**：allenai/Molmo-7B-D-0924等
 - **分析内容**：embedding层 + embedding相关norm层
 
+### 6. MoonVit
+- **模型**：MoonVit/moonvit-base-patch16-224等
+- **分析内容**：patch embedding、position embedding + 相关norm层
+
+### 7. KimiVL-A3B  
+- **模型**：kimivl-A3B等
+- **分析内容**：embedding层 + embedding相关norm层
+
 ## 安装依赖
 
 ```bash
