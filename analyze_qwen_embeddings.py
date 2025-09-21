@@ -75,18 +75,43 @@ class MultiModalEmbeddingAnalyzer:
             # 根据模型类型选择加载方式
             if self.model_type in ['qwen', 'qwen-vl', 'molmo', 'kimivl']:
                 # 需要分词器的模型
-                self.tokenizer = AutoTokenizer.from_pretrained(
+                try:
+                    self.tokenizer = AutoTokenizer.from_pretrained(
+                        self.model_name,
+                        trust_remote_code=True
+                    )
+                except Exception as tokenizer_error:
+                    print(f"分词器加载警告: {tokenizer_error}")
+                    self.tokenizer = None
+            
+            # 针对KimiVL模型的特殊处理
+            if self.model_type == 'kimivl':
+                try:
+                    # 尝试使用不同的加载方式
+                    self.model = AutoModel.from_pretrained(
+                        self.model_name,
+                        torch_dtype=torch.float16 if self.device != "cpu" else torch.float32,
+                        device_map="auto" if self.device != "cpu" else None,
+                        trust_remote_code=True,
+                        attn_implementation="eager"  # 使用eager attention实现
+                    )
+                except Exception as eager_error:
+                    print(f"尝试eager attention失败: {eager_error}")
+                    # 如果eager也失败，尝试更基本的加载方式
+                    self.model = AutoModel.from_pretrained(
+                        self.model_name,
+                        torch_dtype=torch.float32,  # 使用float32
+                        trust_remote_code=True,
+                        low_cpu_mem_usage=True
+                    )
+            else:
+                # 其他模型的标准加载方式
+                self.model = AutoModel.from_pretrained(
                     self.model_name,
+                    torch_dtype=torch.float16 if self.device != "cpu" else torch.float32,
+                    device_map="auto" if self.device != "cpu" else None,
                     trust_remote_code=True
                 )
-            
-            # 加载模型
-            self.model = AutoModel.from_pretrained(
-                self.model_name,
-                torch_dtype=torch.float16 if self.device != "cpu" else torch.float32,
-                device_map="auto" if self.device != "cpu" else None,
-                trust_remote_code=True
-            )
             
             if self.device == "cpu":
                 self.model = self.model.to(self.device)
@@ -96,7 +121,27 @@ class MultiModalEmbeddingAnalyzer:
             
         except Exception as e:
             print(f"模型加载失败: {e}")
-            return False
+            print("尝试使用备用加载方法...")
+            
+            # 备用加载方法
+            try:
+                self.model = AutoModel.from_pretrained(
+                    self.model_name,
+                    torch_dtype=torch.float32,
+                    trust_remote_code=True,
+                    low_cpu_mem_usage=True,
+                    device_map=None
+                )
+                
+                if self.device == "cpu":
+                    self.model = self.model.to(self.device)
+                
+                print(f"备用方法加载成功！")
+                return True
+                
+            except Exception as backup_error:
+                print(f"备用方法也失败: {backup_error}")
+                return False
     
     def find_embedding_layers(self) -> Dict[str, torch.nn.Module]:
         """查找模型中的embedding层"""

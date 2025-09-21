@@ -1,0 +1,631 @@
+{
+  "model_name": "/ytech_m2v5_hdd/workspace/kling_mm/Models/MoonViT-SO-400M",
+  "device": "cuda",
+  "embedding_layers": {
+    "patch_embed.pos_emb": {
+      "embedding_shape": [
+        64,
+        64,
+        1152
+      ],
+      "vocab_size": 64,
+      "embedding_dim": 64,
+      "norm_mean": Infinity,
+      "norm_std": NaN,
+      "norm_min": 0.0714111328125,
+      "norm_max": Infinity,
+      "weight_mean": -0.0032978057861328125,
+      "weight_std": Infinity,
+      "weight_abs_mean": 0.21484375
+    }
+  },
+  "norm_layers": {
+    "encoder.blocks.0.norm0": {
+      "mean": 0.2166748046875,
+      "abs_mean": 0.245361328125,
+      "std": 0.53662109375,
+      "min": -2.125,
+      "max": 3.65625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.0.norm1": {
+      "mean": 0.7841796875,
+      "abs_mean": 0.82470703125,
+      "std": 1.892578125,
+      "min": -0.97265625,
+      "max": 13.25,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.1.norm0": {
+      "mean": 0.1781005859375,
+      "abs_mean": 0.205322265625,
+      "std": 0.313232421875,
+      "min": -2.15625,
+      "max": 2.921875,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.1.norm1": {
+      "mean": 0.319580078125,
+      "abs_mean": 0.3759765625,
+      "std": 0.5068359375,
+      "min": -3.59375,
+      "max": 3.890625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.2.norm0": {
+      "mean": 0.25927734375,
+      "abs_mean": 0.28271484375,
+      "std": 0.343505859375,
+      "min": -2.0,
+      "max": 2.171875,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.2.norm1": {
+      "mean": 0.416259765625,
+      "abs_mean": 0.448486328125,
+      "std": 0.60693359375,
+      "min": -2.078125,
+      "max": 3.5625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.3.norm0": {
+      "mean": 0.28759765625,
+      "abs_mean": 0.31396484375,
+      "std": 0.369873046875,
+      "min": -3.234375,
+      "max": 5.09375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.3.norm1": {
+      "mean": 0.38916015625,
+      "abs_mean": 0.4365234375,
+      "std": 0.468505859375,
+      "min": -3.09375,
+      "max": 2.0,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.4.norm0": {
+      "mean": 0.388671875,
+      "abs_mean": 0.41552734375,
+      "std": 0.447021484375,
+      "min": -2.171875,
+      "max": 6.125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.4.norm1": {
+      "mean": 0.400390625,
+      "abs_mean": 0.46142578125,
+      "std": 0.454345703125,
+      "min": -3.21875,
+      "max": 2.1875,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.5.norm0": {
+      "mean": 0.33984375,
+      "abs_mean": 0.366943359375,
+      "std": 0.37451171875,
+      "min": -1.7109375,
+      "max": 3.8125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.5.norm1": {
+      "mean": 0.393310546875,
+      "abs_mean": 0.44677734375,
+      "std": 0.435791015625,
+      "min": -2.875,
+      "max": 1.4765625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.6.norm0": {
+      "mean": 0.3701171875,
+      "abs_mean": 0.39990234375,
+      "std": 0.40087890625,
+      "min": -1.8515625,
+      "max": 4.46875,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.6.norm1": {
+      "mean": 0.38134765625,
+      "abs_mean": 0.435791015625,
+      "std": 0.415283203125,
+      "min": -3.125,
+      "max": 2.421875,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.7.norm0": {
+      "mean": 0.34521484375,
+      "abs_mean": 0.376220703125,
+      "std": 0.38427734375,
+      "min": -2.296875,
+      "max": 3.90625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.7.norm1": {
+      "mean": 0.39990234375,
+      "abs_mean": 0.45849609375,
+      "std": 0.43359375,
+      "min": -3.78125,
+      "max": 2.015625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.8.norm0": {
+      "mean": 0.423583984375,
+      "abs_mean": 0.4501953125,
+      "std": 0.447265625,
+      "min": -2.03125,
+      "max": 2.78125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.8.norm1": {
+      "mean": 0.39306640625,
+      "abs_mean": 0.466552734375,
+      "std": 0.454833984375,
+      "min": -3.90625,
+      "max": 2.796875,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.9.norm0": {
+      "mean": 0.411376953125,
+      "abs_mean": 0.443603515625,
+      "std": 0.44482421875,
+      "min": -2.0,
+      "max": 2.65625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.9.norm1": {
+      "mean": 0.43115234375,
+      "abs_mean": 0.52392578125,
+      "std": 0.52197265625,
+      "min": -5.3125,
+      "max": 5.78125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.10.norm0": {
+      "mean": 0.4150390625,
+      "abs_mean": 0.44921875,
+      "std": 0.453369140625,
+      "min": -2.640625,
+      "max": 2.859375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.10.norm1": {
+      "mean": 0.435546875,
+      "abs_mean": 0.51806640625,
+      "std": 0.5234375,
+      "min": -5.53125,
+      "max": 5.84375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.11.norm0": {
+      "mean": 0.409423828125,
+      "abs_mean": 0.448486328125,
+      "std": 0.447998046875,
+      "min": -4.4375,
+      "max": 2.203125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.11.norm1": {
+      "mean": 0.42529296875,
+      "abs_mean": 0.51220703125,
+      "std": 0.51025390625,
+      "min": -5.875,
+      "max": 4.53125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.12.norm0": {
+      "mean": 0.438720703125,
+      "abs_mean": 0.47705078125,
+      "std": 0.4794921875,
+      "min": -5.34375,
+      "max": 3.0,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.12.norm1": {
+      "mean": 0.499755859375,
+      "abs_mean": 0.59912109375,
+      "std": 0.62744140625,
+      "min": -10.9375,
+      "max": 5.34375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.13.norm0": {
+      "mean": 0.45849609375,
+      "abs_mean": 0.50830078125,
+      "std": 0.5009765625,
+      "min": -5.75,
+      "max": 2.578125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.13.norm1": {
+      "mean": 0.50830078125,
+      "abs_mean": 0.61181640625,
+      "std": 0.6181640625,
+      "min": -6.625,
+      "max": 10.625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.14.norm0": {
+      "mean": 0.490478515625,
+      "abs_mean": 0.54736328125,
+      "std": 0.5439453125,
+      "min": -8.5625,
+      "max": 2.375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.14.norm1": {
+      "mean": 0.57421875,
+      "abs_mean": 0.6669921875,
+      "std": 0.619140625,
+      "min": -7.0625,
+      "max": 8.8125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.15.norm0": {
+      "mean": 0.50830078125,
+      "abs_mean": 0.5625,
+      "std": 0.55810546875,
+      "min": -9.125,
+      "max": 1.90625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.15.norm1": {
+      "mean": 0.7216796875,
+      "abs_mean": 0.92041015625,
+      "std": 0.86572265625,
+      "min": -10.5625,
+      "max": 4.9375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.16.norm0": {
+      "mean": 0.537109375,
+      "abs_mean": 0.58935546875,
+      "std": 0.58642578125,
+      "min": -9.6875,
+      "max": 1.953125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.16.norm1": {
+      "mean": 0.908203125,
+      "abs_mean": 1.2822265625,
+      "std": 1.228515625,
+      "min": -11.9375,
+      "max": 4.84375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.17.norm0": {
+      "mean": 0.57275390625,
+      "abs_mean": 0.62353515625,
+      "std": 0.62109375,
+      "min": -10.625,
+      "max": 1.90625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.17.norm1": {
+      "mean": 1.125,
+      "abs_mean": 1.6845703125,
+      "std": 1.6572265625,
+      "min": -16.875,
+      "max": 6.9375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.18.norm0": {
+      "mean": 0.5732421875,
+      "abs_mean": 0.63720703125,
+      "std": 0.615234375,
+      "min": -8.625,
+      "max": 1.71875,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.18.norm1": {
+      "mean": 1.3994140625,
+      "abs_mean": 1.9228515625,
+      "std": 1.84375,
+      "min": -27.375,
+      "max": 6.1875,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.19.norm0": {
+      "mean": 0.6201171875,
+      "abs_mean": 0.7001953125,
+      "std": 0.67138671875,
+      "min": -10.4375,
+      "max": 1.953125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.19.norm1": {
+      "mean": 1.9287109375,
+      "abs_mean": 2.623046875,
+      "std": 2.478515625,
+      "min": -28.75,
+      "max": 8.8125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.20.norm0": {
+      "mean": 0.6572265625,
+      "abs_mean": 0.76171875,
+      "std": 0.7216796875,
+      "min": -11.625,
+      "max": 1.703125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.20.norm1": {
+      "mean": 2.337890625,
+      "abs_mean": 3.177734375,
+      "std": 3.03515625,
+      "min": -40.75,
+      "max": 10.3125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.21.norm0": {
+      "mean": 0.65771484375,
+      "abs_mean": 0.77978515625,
+      "std": 0.72509765625,
+      "min": -9.9375,
+      "max": 1.859375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.21.norm1": {
+      "mean": 3.36328125,
+      "abs_mean": 4.3359375,
+      "std": 4.0703125,
+      "min": -62.5,
+      "max": 16.5,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.22.norm0": {
+      "mean": 0.65283203125,
+      "abs_mean": 0.80615234375,
+      "std": 0.74267578125,
+      "min": -8.3125,
+      "max": 2.265625,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.22.norm1": {
+      "mean": 4.140625,
+      "abs_mean": 5.15234375,
+      "std": 4.66015625,
+      "min": -50.5,
+      "max": 18.375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.23.norm0": {
+      "mean": 0.66455078125,
+      "abs_mean": 0.84619140625,
+      "std": 0.77392578125,
+      "min": -7.375,
+      "max": 2.75,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.23.norm1": {
+      "mean": 5.0546875,
+      "abs_mean": 6.06640625,
+      "std": Infinity,
+      "min": -66.5,
+      "max": 22.75,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.24.norm0": {
+      "mean": 0.67431640625,
+      "abs_mean": 0.85302734375,
+      "std": 0.806640625,
+      "min": -8.5625,
+      "max": 4.09375,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.24.norm1": {
+      "mean": 5.6796875,
+      "abs_mean": 6.55078125,
+      "std": Infinity,
+      "min": -57.5,
+      "max": 20.875,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.25.norm0": {
+      "mean": 0.58642578125,
+      "abs_mean": 0.72900390625,
+      "std": 0.72119140625,
+      "min": -9.8125,
+      "max": 4.28125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.25.norm1": {
+      "mean": 3.763671875,
+      "abs_mean": 5.12109375,
+      "std": 4.8515625,
+      "min": -35.75,
+      "max": 32.0,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.26.norm0": {
+      "mean": 0.44580078125,
+      "abs_mean": 0.53125,
+      "std": 0.5341796875,
+      "min": -6.65625,
+      "max": 3.5,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.blocks.26.norm1": {
+      "mean": 2.9453125,
+      "abs_mean": 3.5703125,
+      "std": 3.14453125,
+      "min": -15.5,
+      "max": 18.5,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    },
+    "encoder.final_layernorm": {
+      "mean": 0.7548828125,
+      "abs_mean": 0.90283203125,
+      "std": 0.826171875,
+      "min": -4.03125,
+      "max": 6.125,
+      "shape": [
+        1152
+      ],
+      "param_count": 2304
+    }
+  },
+  "total_embedding_layers": 1,
+  "total_norm_layers": 55
+}
